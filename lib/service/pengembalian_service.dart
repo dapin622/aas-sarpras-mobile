@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/pengembalian_model.dart';
 
 class PengembalianService {
-  final String baseUrl = 'http://127.0.0.1:8000/api'; // ← baseUrl sudah mengandung /api
+  final String baseUrl = 'http://127.0.0.1:8000/api';  
 
   Future<bool> kirimPengembalian(Pengembalian pengembalian) async {
     final response = await http.post(
@@ -40,8 +40,8 @@ class PengembalianService {
         headers: {'Accept': 'application/json'},
       );
 
-      print("Status Code: ${response.statusCode}");
-      print("Raw Response Body: ${response.body}");
+      // print("Status Code: ${response.statusCode}");
+      // print("Raw Response Body: ${response.body}");
 
       if (response.statusCode == 200) {
         final List<dynamic> data = jsonDecode(response.body);

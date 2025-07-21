@@ -39,6 +39,7 @@ dependencies:
   http: ^1.4.0
   intl: ^0.20.2
   cached_network_image: ^3.4.1
+  flutter_native_splash: ^2.4.4
 
 dev_dependencies:
   flutter_test:
@@ -59,12 +60,22 @@ flutter:
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
-  # the material Icons class.
+  # the material Icons class. 
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logotb.png
+    - assets/logotb1.png
+    - assets/logotbvector.png
+
+flutter_native_splash:
+  color: "#ffffff"                        
+  image: assets/logotbvector.png                 
+  android: true
+  ios: true
+  web: true                       
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

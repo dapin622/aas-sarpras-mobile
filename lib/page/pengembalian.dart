@@ -27,7 +27,7 @@ class _PengembalianPageState extends State<PengembalianPage> {
     super.didChangeDependencies();
     if (!_initialized) {
       peminjaman = ModalRoute.of(context)!.settings.arguments as Peminjaman;
-      _selectedTanggalPengembalian = DateTime.now(); // Otomatis isi tanggal sekarang
+      _selectedTanggalPengembalian = DateTime.now(); 
       _calculateDenda();
       _initialized = true;
     }
@@ -163,7 +163,7 @@ class _PengembalianPageState extends State<PengembalianPage> {
               decoration: const InputDecoration(
                 labelText: 'Tanggal & Waktu Pengembalian',
                 border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.calendar_today),
+                // suffixIcon: Icon(Icons.calendar_today),
               ),
               controller: TextEditingController(text: tanggalPengembalianFormatted),
             ),
